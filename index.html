@@ -3,12 +3,18 @@
         <title>Viena Paes</title>
         <meta charset="utf-8" />
         <style>
-            #produtos,
-            #carrinho{
+            #produtos{
                 max-width: 900px;
                 margin:0 auto;
                 padding:0 2%;
                 display: flex;
+            }
+            
+            #carrinho{
+                max-width: 900px;
+                margin:0 auto;
+                padding:0 2%;
+                display: block;
             }
 
             .produto-single{
@@ -74,6 +80,7 @@
 
             atualizarCarrinho = () =>{
                 var containerCarrinho = document.getElementById ('carrinho');
+                containerCarrinho.innerHTML = "";
                 items.map((val) =>{
                     if(val.quantidade > 0){
                     containerCarrinho.innerHTML+= `
